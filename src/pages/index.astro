@@ -1,12 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Counter from '../components/Counter'
-import { Button } from '@/components/ui/button'
+import { Sites } from '../data/siteData'
+import Map from '../components/Map'
+import SiteExperience from '../components/SiteExperience'
 ---
 
-<Layout title="Palo Pinto Carousel">
-    <Counter count={0} client:visible>
-        <h1>Hello, React!</h1>
-    </Counter>
-    <Button client:visible>ShadCN Button</Button>
+<Layout title="Jefferson Map">
+    <img
+        src="/Explore Jefferson - Text.svg"
+        alt="Explore Jefferson"
+        class="absolute left-[241px] top-[122px] right-[241px] z-20 w-[1361px]"
+    />
+    <SiteExperience client:only="react" />
 </Layout>

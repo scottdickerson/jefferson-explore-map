@@ -20,14 +20,16 @@ const { title } = Astro.props
             body {
                 font-family: system-ui;
                 margin: 0;
-            }
-            body {
-                padding: 2rem;
+                padding: 0rem;
+                overflow-y: auto;
+                img {
+                    -webkit-user-drag: none;
+                }
             }
         </style>
     </head>
     <body>
-        <main class="text-pretty">
+        <main class="text-pretty relative w-[1843px] h-[3168px] select-none">
             <SendToAttractScreen />
             <slot />
         </main>
