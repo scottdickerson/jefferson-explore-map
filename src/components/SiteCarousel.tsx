@@ -14,15 +14,15 @@ export function SiteCarousel({ onSelectSite }: SiteCarouselProps) {
     const { highlightedSite, setHighlightedSite } = useSiteContext()
     return (
         <Carousel
-            className="absolute top-[2424px] min-h-[380px] left-20 right-20 flex items-center justify-center"
+            className="absolute top-[2509px] min-h-[380px] left-20 right-20 ml-20 mr-20 flex items-center justify-center"
             opts={{ loop: true }}
         >
-            <CarouselPrevious className="left-0" />
+            <CarouselPrevious />
             <SiteCarouselContent
                 highlightedSite={highlightedSite || undefined}
                 setHighlightedSite={setHighlightedSite}
             />
-            <CarouselNext className="right-0" />
+            <CarouselNext />
         </Carousel>
     )
 }

@@ -11,6 +11,7 @@ export const SiteCarouselContent = ({
     setHighlightedSite,
 }: SiteCarouselContentProps) => {
     const { api } = useCarousel()
+
     const [slidesInView, setSlidesInView] = useState<number[]>()
     const [isDragging, setIsDragging] = useState(false)
     api?.on('pointerDown', () => setIsDragging(true))
@@ -25,75 +26,68 @@ export const SiteCarouselContent = ({
     }, [highlightedSite, isDragging])
 
     api?.on('slidesInView', (event) => {
-        const slidesInView = event.slidesInView()
-        const centeredIndex = Math.floor(slidesInView.length / 2)
-
-        let rightMostSlideBeforeWrap = slidesInView.length
-        for (let i = slidesInView.length - 1; i > 0; i--) {
-            if (slidesInView[i] - slidesInView[i - 1] > 1) {
-                // this means we have a gap
-                rightMostSlideBeforeWrap = i
-                break
+        let slidesInView = event.slidesInView()
+        // Keep five visible slides in carousel order even when looping (e.g. [0,1,2,23,24])
+        if (slidesInView.length === 5) {
+            // If the range suggests a wrap (large gap from first to last), rotate at the largest gap
+            if (slidesInView[slidesInView.length - 1] - slidesInView[0] > 5) {
+                let maxGap = -Infinity
+                let splitIdx = 0
+                for (let i = 1; i < slidesInView.length; i++) {
+                    const gap = slidesInView[i] - slidesInView[i - 1]
+                    if (gap > maxGap) {
+                        maxGap = gap
+                        splitIdx = i
+                    }
+                }
+                slidesInView = [
+                    ...slidesInView.slice(splitIdx),
+                    ...slidesInView.slice(0, splitIdx),
+                ]
             }
+            setHighlightedSite(Sites[slidesInView[2]]?.site || '')
+            setSlidesInView(slidesInView)
         }
-
-        const reorderedSlidesInView = [
-            ...slidesInView.slice(
-                rightMostSlideBeforeWrap,
-                slidesInView.length
-            ),
-            ...slidesInView.slice(0, rightMostSlideBeforeWrap),
-        ]
-
-        console.log('slidesInView', slidesInView)
-        console.log('reorderedSlidesInView', reorderedSlidesInView)
-
-        // Now the center is always at index 2
-        setHighlightedSite(
-            Sites[reorderedSlidesInView[centeredIndex]]?.site || ''
-        )
-        setSlidesInView(reorderedSlidesInView)
     })
 
     return (
         <CarouselContent>
             {Sites.map((site, index) => {
-                let imgSrc = site.sepiaPhotoSrc
-                let imageSizeClass = 'p-0 text-2xl transition-all duration-100'
+                const isCentered = highlightedSite === site.site
+                let imageSizeClass = 'p-0 text-2xl '
                 if (
                     index === slidesInView?.[0] ||
                     index === slidesInView?.[4]
                 ) {
-                    imageSizeClass = `p-32 ${index === slidesInView?.[0] ? 'pr-0 pl-30' : 'pl-0 pr-30'}` // leftmost slide has no left padding, rightmost slide has no right padding
-                }
-                if (
+                    imageSizeClass = `scale-[60%] ${index === slidesInView?.[0] ? 'translate-x-20 pr-0 pl-30' : '-translate-x-20 pl-0 pr-30'}` // leftmost slide has no left padding, rightmost slide has no right padding
+                } else if (
                     index === slidesInView?.[1] ||
                     index === slidesInView?.[3]
                 ) {
-                    imageSizeClass = 'p-10'
-                }
-                if (highlightedSite === site.site) {
-                    imgSrc = site.colorPhotoSrc
+                    imageSizeClass = 'scale-75'
+                } else if (isCentered) {
                 }
                 return (
                     <CarouselItem key={site.site}>
                         <div
                             className={
-                                `flex flex-col items-center justify-center text-[#C19E6D] ${imageSizeClass}` // this is screwing up the slides in view location
+                                ` text-[#C19E6D] ${imageSizeClass}  transition-all duration-500 ` // this is screwing up the slides in view location
                             }
                         >
-                            <img
-                                src={imgSrc}
-                                alt={site.site}
-                                className={
-                                    site.site === highlightedSite
-                                        ? 'mb-2 object-contain '
-                                        : 'mb-2  object-contain opacity-70'
-                                }
-                            />
-                            <h3 className=" font-bold mb-2 text-center">
-                                {site.site}
-                            </h3>
+                            <div className="flex flex-col items-center justify-center">
+                                <img
+                                    src={site.colorPhotoSrc}
+                                    alt={site.site}
+                                    className={
+                                        isCentered
+                                            ? `mb-4 object-contain transition-all duration-500 filter sepia-0 opacity-100`
+                                            : `mb-4  object-contain opacity-70 transition-all duration-500 filter sepia`
+                                    }
+                                />
+                                <h3 className="font-bold mb-2 text-center">
+                                    {site.site}
+                                </h3>
+                            </div>
                         </div>
                     </CarouselItem>
                 )
