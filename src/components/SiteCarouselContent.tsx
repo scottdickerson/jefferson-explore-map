@@ -55,9 +55,11 @@ export const SiteCarouselContent = ({
             {Sites.map((site, index) => {
                 const isCentered = highlightedSite === site.site
                 let imageSizeClass = 'p-0 text-2xl '
+                let imgSrc = site.sepiaPhotoSrc
                 if (
                     index === slidesInView?.[0] ||
-                    index === slidesInView?.[4]
+                    index === slidesInView?.[4] ||
+                    !slidesInView?.includes(index)
                 ) {
                     imageSizeClass = `scale-[60%] ${index === slidesInView?.[0] ? 'translate-x-20 pr-0 pl-30' : '-translate-x-20 pl-0 pr-30'}` // leftmost slide has no left padding, rightmost slide has no right padding
                 } else if (
@@ -66,25 +68,26 @@ export const SiteCarouselContent = ({
                 ) {
                     imageSizeClass = 'scale-75'
                 } else if (isCentered) {
+                    imgSrc = site.colorPhotoSrc
                 }
                 return (
                     <CarouselItem key={site.site}>
                         <div
                             className={
-                                ` text-[#C19E6D] ${imageSizeClass}  transition-all duration-500 ` // this is screwing up the slides in view location
+                                ` text-[#C19E6D] text-3xl uppercase font-freight ${imageSizeClass}  transition-all duration-100 ` // this is screwing up the slides in view location
                             }
                         >
                             <div className="flex flex-col items-center justify-center">
                                 <img
-                                    src={site.colorPhotoSrc}
+                                    src={imgSrc}
                                     alt={site.site}
                                     className={
                                         isCentered
-                                            ? `mb-4 object-contain transition-all duration-500 filter sepia-0 opacity-100`
-                                            : `mb-4  object-contain opacity-70 transition-all duration-500 filter sepia`
+                                            ? `mb-4 object-contain transition-all duration-500 opacity-100`
+                                            : `mb-4  object-contain transition-all duration-500`
                                     }
                                 />
-                                <h3 className="font-bold mb-2 text-center">
+                                <h3 className="mb-2 text-center block pl-6 pr-6">
                                     {site.site}
                                 </h3>
                             </div>

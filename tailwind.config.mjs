@@ -50,6 +50,9 @@ export default {
                     5: 'hsl(var(--chart-5))',
                 },
             },
+            fontFamily: {
+                freight: 'FreightDispProBlack',
+            },
             // Add custom 10s duration utilities
             transitionDuration: {
                 10000: '10000ms', // usage: duration-10000
