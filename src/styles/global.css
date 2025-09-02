@@ -78,3 +78,8 @@
     font-family: 'FreightDispProBlack';
     src: url('/fonts/FreightDispProMedium-Regular.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'CrimsonText';
+    src: url('/fonts/CrimsonText-Regular.ttf') format('ttf');
+}

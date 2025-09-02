@@ -1,18 +1,16 @@
 import { Sites } from '@/data/siteData'
 import { CarouselContent, CarouselItem, useCarousel } from './ui/carousel'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { useSiteContext } from '@/providers/SiteProvider'
 
-export interface SiteCarouselContentProps {
-    highlightedSite?: string
-    setHighlightedSite: (site: string) => void
-}
-export const SiteCarouselContent = ({
-    highlightedSite = Sites[0].site,
-    setHighlightedSite,
-}: SiteCarouselContentProps) => {
+export const SiteCarouselContent = () => {
     const { api } = useCarousel()
+    const { setPopupOpen, highlightedSite, setHighlightedSite } =
+        useSiteContext()
 
     const [slidesInView, setSlidesInView] = useState<number[]>()
+    // Have to track this in a ref because we need to subscribe before a useEffect can run
+    const subscribedToAPI = useRef(false)
     const [isDragging, setIsDragging] = useState(false)
     api?.on('pointerDown', () => setIsDragging(true))
     api?.on('pointerUp', () => setIsDragging(false))
@@ -25,30 +23,36 @@ export const SiteCarouselContent = ({
         )
     }, [highlightedSite, isDragging])
 
-    api?.on('slidesInView', (event) => {
-        let slidesInView = event.slidesInView()
-        // Keep five visible slides in carousel order even when looping (e.g. [0,1,2,23,24])
-        if (slidesInView.length === 5) {
-            // If the range suggests a wrap (large gap from first to last), rotate at the largest gap
-            if (slidesInView[slidesInView.length - 1] - slidesInView[0] > 5) {
-                let maxGap = -Infinity
-                let splitIdx = 0
-                for (let i = 1; i < slidesInView.length; i++) {
-                    const gap = slidesInView[i] - slidesInView[i - 1]
-                    if (gap > maxGap) {
-                        maxGap = gap
-                        splitIdx = i
+    if (!subscribedToAPI.current) {
+        api?.on('slidesInView', (event) => {
+            subscribedToAPI.current = true
+            let slidesInView = event.slidesInView()
+            // Keep five visible slides in carousel order even when looping (e.g. [0,1,2,23,24])
+            if (slidesInView.length === 5) {
+                // If the range suggests a wrap (large gap from first to last), rotate at the largest gap
+                if (
+                    slidesInView[slidesInView.length - 1] - slidesInView[0] >
+                    5
+                ) {
+                    let maxGap = -Infinity
+                    let splitIdx = 0
+                    for (let i = 1; i < slidesInView.length; i++) {
+                        const gap = slidesInView[i] - slidesInView[i - 1]
+                        if (gap > maxGap) {
+                            maxGap = gap
+                            splitIdx = i
+                        }
                     }
+                    slidesInView = [
+                        ...slidesInView.slice(splitIdx),
+                        ...slidesInView.slice(0, splitIdx),
+                    ]
                 }
-                slidesInView = [
-                    ...slidesInView.slice(splitIdx),
-                    ...slidesInView.slice(0, splitIdx),
-                ]
+                setHighlightedSite(Sites[slidesInView[2]]?.site || '')
+                setSlidesInView(slidesInView)
             }
-            setHighlightedSite(Sites[slidesInView[2]]?.site || '')
-            setSlidesInView(slidesInView)
-        }
-    })
+        })
+    }
 
     return (
         <CarouselContent>
@@ -73,9 +77,21 @@ export const SiteCarouselContent = ({
                 return (
                     <CarouselItem key={site.site}>
                         <div
-                            className={
-                                ` text-[#C19E6D] text-3xl uppercase font-freight ${imageSizeClass}  transition-all duration-100 ` // this is screwing up the slides in view location
+                            className={` text-[#C19E6D] text-3xl uppercase font-freight ${imageSizeClass}  transition-all duration-100 `}
+                            onClick={() => {
+                                if (isCentered) {
+                                    setPopupOpen(true)
+                                }
+                            }}
+                            role={isCentered ? 'button' : undefined}
+                            aria-label={
+                                isCentered
+                                    ? `Open details for ${site.site}`
+                                    : undefined
                             }
+                            style={{
+                                cursor: isCentered ? 'pointer' : 'default',
+                            }}
                         >
                             <div className="flex flex-col items-center justify-center">
                                 <img

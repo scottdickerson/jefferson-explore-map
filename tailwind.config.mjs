@@ -52,6 +52,13 @@ export default {
             },
             fontFamily: {
                 freight: 'FreightDispProBlack',
+                crimsonText: 'CrimsonText',
+            },
+            fontSize: {
+                // 29px font-size with 40px line-height
+                description: ['29px', { lineHeight: '40px' }],
+                // 27px font-size with 40px line-height
+                'address-instructions': ['27px', { lineHeight: '40px' }],
             },
             // Add custom 10s duration utilities
             transitionDuration: {

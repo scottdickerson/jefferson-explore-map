@@ -1,27 +1,37 @@
-import { Sites } from '@/data/siteData'
-import React from 'react'
+import React, { useMemo } from 'react'
 
 export interface SiteContextValue {
     highlightedSite: string | null
     setHighlightedSite: (site: string | null) => void
+    isPopupOpen: boolean
+    setPopupOpen: (open: boolean) => void
 }
 export const SiteContext = React.createContext<SiteContextValue>({
-    highlightedSite: Sites[0].site,
+    highlightedSite: null,
     setHighlightedSite: () => {},
+    isPopupOpen: false,
+    setPopupOpen: () => {},
 })
 
 export const SiteProvider: React.FC<React.PropsWithChildren> = ({
     children,
 }) => {
     const [highlightedSite, setHighlightedSite] = React.useState<string | null>(
-        Sites[0].site
+        null
+    )
+    const [isPopupOpen, setPopupOpen] = React.useState(false)
+
+    const value = useMemo(
+        () => ({
+            highlightedSite,
+            setHighlightedSite,
+            isPopupOpen,
+            setPopupOpen,
+        }),
+        [isPopupOpen, highlightedSite]
     )
 
-    return (
-        <SiteContext.Provider value={{ highlightedSite, setHighlightedSite }}>
-            {children}
-        </SiteContext.Provider>
-    )
+    return <SiteContext.Provider value={value}>{children}</SiteContext.Provider>
 }
 
 export const useSiteContext = () => React.useContext(SiteContext)

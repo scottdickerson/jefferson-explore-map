@@ -25,7 +25,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Alley-Carlson-House_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Alley-Carlson-House_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Alley-Carlson-House_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Alley-Carlson-House_Sepia.png',
     },
@@ -41,7 +41,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Benefield-House_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Benefield-House_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Benefield-House_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Benefield-House_Sepia.png',
     },
@@ -57,7 +57,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Birge-Beard-House_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Birge-Beard-House_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Birge-Beard-House_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Birge-Beard-House_Sepia.png',
     },
@@ -73,7 +73,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Captain-William-Perry-Home_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Captain-William-Perry-Home_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Captain-William-Perry-Home_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Captain-William-Perry-Home_Sepia.png',
     },
@@ -89,7 +89,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Christ-Episcopal-Church_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Christ-Episcopal-Church_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Christ-Episcopal-Church_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Christ-Episcopal-Church_Sepia.png',
     },
@@ -105,7 +105,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Cumberland-Presbyterian-Church_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Cumberland-Presbyterian-Church_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Cumberland-Presbyterian-Church_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Cumberland-Presbyterian-Church_Sepia.png',
     },
@@ -121,7 +121,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Excelsior-Hotel_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Excelsior-Hotel_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Excelsior-Hotel_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Excelsior-Hotel_Sepia.png',
     },
@@ -138,7 +138,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/First-Baptist-Church_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/First-Baptist-Church_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/First-Baptist-Church_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/First-Baptist-Church_Sepia.png',
     },
@@ -154,7 +154,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/First-Methodist-Church_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/First-Methodist-Church_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/First-Methodist-Church_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/First-Methodist-Church_Sepia.png',
     },
@@ -169,7 +169,7 @@ export const Sites: Site[] = [
         walking: '5 min.  |  0.2 mile  |  This is a short walk',
         description: `The Grove, built in 1861, is one of the most famous historic homes in Jefferson. Known for its beautiful Greek Revival architecture and lush gardens, The Grove has been featured in numerous books and television programs for its rich history and reported hauntings. The home has been meticulously restored and is open for tours, offering visitors a glimpse into Jefferson’s past and its enduring legends.`,
         colorPhotoSrc: '/Location Photos/Color Photos/The-Grove_Color.png',
-        popupPhotoSrc: '/Location Photos/Pop-Ups Photos/The-Grove_Pop-Up.png',
+        popupPhotoSrc: '/Location Photos/Pop-Up Photos/The-Grove_Pop-Up.png',
         sepiaPhotoSrc: '/Location Photos/Sepia Photos/The-Grove_Sepia.png',
     },
     {
@@ -184,7 +184,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Historic-Kahn-Hotel_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Historic-Kahn-Hotel_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Historic-Kahn-Hotel_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Historic-Kahn-Hotel_Sepia.png',
     },
@@ -200,7 +200,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/House-Of-Seasons_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/House-Of-Seasons_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/House-Of-Seasons_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/House-Of-Seasons_Sepia.png',
     },
@@ -216,7 +216,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Immaculate-Conception-Church_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Immaculate-Conception-Church_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Immaculate-Conception-Church_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Immaculate-Conception-Church_Sepia.png',
     },
@@ -232,7 +232,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Jay-Gould-Railway-Car_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Jay-Gould-Railway-Car_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Jay-Gould-Railway-Car_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Jay-Gould-Railway-Car_Sepia.png',
     },
@@ -248,7 +248,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Jefferson-Carnegie-Library_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Jefferson-Carnegie-Library_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Jefferson-Carnegie-Library_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Jefferson-Carnegie-Library_Sepia.png',
     },
@@ -264,7 +264,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Jefferson-Playhouse_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Jefferson-Playhouse_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Jefferson-Playhouse_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Jefferson-Playhouse_Sepia.png',
     },
@@ -278,7 +278,7 @@ export const Sites: Site[] = [
         walking: '6 min.  |  0.3 mile  |  This is a moderate walk',
         description: `Magnolias, built in the late 19th century, is a charming Victorian home known for its wraparound porch and beautiful magnolia trees. The house has been lovingly maintained and is a favorite stop for visitors interested in Jefferson’s residential architecture and Southern hospitality.`,
         colorPhotoSrc: '/Location Photos/Color Photos/Magnolias_Color.png',
-        popupPhotoSrc: '/Location Photos/Pop-Ups Photos/Magnolias_Pop-Up.png',
+        popupPhotoSrc: '/Location Photos/Pop-Up Photos/Magnolias_Pop-Up.png',
         sepiaPhotoSrc: '/Location Photos/Sepia Photos/Magnolias_Sepia.png',
     },
     {
@@ -291,7 +291,7 @@ export const Sites: Site[] = [
         walking: '7 min.  |  0.3 mile  |  This is a moderate walk',
         description: `The Manse, built in 1872, served as the residence for the pastors of the Cumberland Presbyterian Church. This stately home features classic Victorian architecture and has been lovingly restored. The Manse is a testament to Jefferson’s religious and architectural heritage, offering visitors a glimpse into the town’s storied past.`,
         colorPhotoSrc: '/Location Photos/Color Photos/Manse_Color.png',
-        popupPhotoSrc: '/Location Photos/Pop-Ups Photos/Manse_Pop-Up.png',
+        popupPhotoSrc: '/Location Photos/Pop-Up Photos/Manse_Pop-Up.png',
         sepiaPhotoSrc: '/Location Photos/Sepia Photos/Manse_Sepia.png',
     },
     {
@@ -306,7 +306,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Perry-Woods-Home_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Perry-Woods-Home_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Perry-Woods-Home_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Perry-Woods-Home_Sepia.png',
     },
@@ -322,7 +322,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Planters-Bank-Building_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Planters-Bank-Building_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Planters-Bank-Building_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Planters-Bank-Building_Sepia.png',
     },
@@ -337,7 +337,7 @@ export const Sites: Site[] = [
         description: `This house was built in 1853 for John and Mary Morgan who sold it to W.F. Smith just two years after it was built. It was locally referred to as the “Smith Premises,” for the next eight years. J.A. Carpenter, editor of the Confederate News, purchased the home next. The house changed hands several times, until 1884 when William Jones Sedberry and his wife, Mrs. Lelia Shortridge George purchased it. In 1892, W.J. Sedberry deeded the home to his son, Hervey Hart Sedberry, who in turn deeded it to his daughter, Ruth Sedberry, in 1924.`,
         colorPhotoSrc: '/Location Photos/Color Photos/Sedberry-House_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Sedberry-House_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Sedberry-House_Pop-Up.png',
         sepiaPhotoSrc: '/Location Photos/Sepia Photos/Sedberry-House_Sepia.png',
     },
     {
@@ -352,7 +352,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Singletons-Virginia-Cross-House_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Singletons-Virginia-Cross-House_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Singletons-Virginia-Cross-House_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Singletons-Virginia-Cross-House_Sepia.png',
     },
@@ -369,7 +369,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Sterne-Fountain_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Sterne-Fountain_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Sterne-Fountain_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Sterne-Fountain_Sepia.png',
     },
@@ -385,7 +385,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/Union-Missionary-Baptist-Church_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/Union-Missionary-Baptist-Church_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/Union-Missionary-Baptist-Church_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/Union-Missionary-Baptist-Church_Sepia.png',
     },
@@ -401,7 +401,7 @@ export const Sites: Site[] = [
         colorPhotoSrc:
             '/Location Photos/Color Photos/WP-Schluter-House_Color.png',
         popupPhotoSrc:
-            '/Location Photos/Pop-Ups Photos/WP-Schluter-House_Pop-Up.png',
+            '/Location Photos/Pop-Up Photos/WP-Schluter-House_Pop-Up.png',
         sepiaPhotoSrc:
             '/Location Photos/Sepia Photos/WP-Schluter-House_Sepia.png',
     },

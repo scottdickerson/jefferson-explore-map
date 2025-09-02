@@ -6,11 +6,7 @@ import {
 import { SiteCarouselContent } from './SiteCarouselContent'
 import { useSiteContext } from '@/providers/SiteProvider'
 
-interface SiteCarouselProps {
-    onSelectSite: (site: string) => void
-}
-
-export function SiteCarousel({ onSelectSite }: SiteCarouselProps) {
+export function SiteCarousel() {
     const { highlightedSite, setHighlightedSite } = useSiteContext()
     return (
         <Carousel
@@ -18,10 +14,7 @@ export function SiteCarousel({ onSelectSite }: SiteCarouselProps) {
             opts={{ loop: true }}
         >
             <CarouselPrevious />
-            <SiteCarouselContent
-                highlightedSite={highlightedSite || undefined}
-                setHighlightedSite={setHighlightedSite}
-            />
+            <SiteCarouselContent />
             <CarouselNext />
         </Carousel>
     )
