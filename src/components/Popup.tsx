@@ -3,6 +3,8 @@ import { useSiteContext } from '@/providers/SiteProvider'
 import { Sites } from '@/data/siteData'
 import { Button } from './ui/button'
 import { useEffect } from 'react'
+import { Description, DialogTitle } from '@radix-ui/react-dialog'
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 
 export default function Popup() {
     const { highlightedSite, isPopupOpen, setPopupOpen } = useSiteContext()
@@ -37,10 +39,18 @@ export default function Popup() {
 
     return (
         <Dialog open={open}>
+            <VisuallyHidden>
+                <DialogTitle>{site.site} Details</DialogTitle>
+            </VisuallyHidden>
             <DialogContent
                 className="p-0 border-none bg-transparent shadow-none max-w-none"
                 onClick={() => setPopupOpen(false)}
             >
+                <VisuallyHidden>
+                    <Description>
+                        Shows a picture of the site and details of the address
+                    </Description>
+                </VisuallyHidden>
                 <div
                     className="relative mx-auto w-[1355.303px] h-[1870px] font-crimsonText"
                     onClick={(e) => e.stopPropagation()}
@@ -80,11 +90,10 @@ export default function Popup() {
                         <img
                             src="/Pop-Up Divider Line.png"
                             alt="Divider"
-                            className=" mt-8 mb-20 w-[1146px] select-none"
+                            className=" mt-8 mb-10 w-[1146px] select-none"
                             draggable={false}
                         />
-
-                        <div className="px-20 absolute inset bottom-[250px] flex items-center gap-8 text-[#F5EFE7]">
+                        <div className="px-20 flex items-center gap-8 text-[#F5EFE7]">
                             <div className="flex flex-col items-center gap-16">
                                 <img
                                     src="/Icons/Pop Up/Location Icon.svg"
@@ -118,14 +127,15 @@ export default function Popup() {
                                 </div>
                             )}
                         </div>
-
+                    </div>
+                    <div className="px-20 absolute inset-0 bottom-[50px] flex justify-center items-center gap-8 text-[#F5EFE7]">
                         {/* Big center close (gold X) */}
                         <Button
                             variant="ghost"
                             onClick={() => {
                                 setPopupOpen(false)
                             }}
-                            className="mt-auto mb-20 self-center text-[#C19E6D] transition-colors outline-none border-none hover:text-white focus:text-white focus:ring-0"
+                            className="mt-auto mb-20 self-center text-[#C19E6D] transition-colors outline-none border-none focus-visible:shadow-transparent hover:text-white focus:text-white "
                             aria-label="Close details"
                         >
                             <img src="/Icons/Pop Up/Close Icon.svg" />
