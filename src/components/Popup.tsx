@@ -37,8 +37,14 @@ export default function Popup() {
 
     return (
         <Dialog open={open}>
-            <DialogContent className="p-0 border-none bg-transparent shadow-none max-w-none">
-                <div className="relative mx-auto w-[1355.303px] h-[1870px] font-crimsonText">
+            <DialogContent
+                className="p-0 border-none bg-transparent shadow-none max-w-none"
+                onClick={() => setPopupOpen(false)}
+            >
+                <div
+                    className="relative mx-auto w-[1355.303px] h-[1870px] font-crimsonText"
+                    onClick={(e) => e.stopPropagation()}
+                >
                     {/* Background panel to mirror Figma asset */}
                     <img
                         src="/Blank Pop-Up Background.png"
@@ -119,7 +125,7 @@ export default function Popup() {
                             onClick={() => {
                                 setPopupOpen(false)
                             }}
-                            className="mt-auto mb-20 self-center text-[#C19E6D] transition-colors"
+                            className="mt-auto mb-20 self-center text-[#C19E6D] transition-colors outline-none border-none hover:text-white focus:text-white focus:ring-0"
                             aria-label="Close details"
                         >
                             <img src="/Icons/Pop Up/Close Icon.svg" />
