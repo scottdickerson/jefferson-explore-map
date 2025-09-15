@@ -5,8 +5,7 @@ import React from 'react'
 // You Are Here icon asset (from Figma MCP context)
 const youAreHereIcon = '/Icons/Map/You Are Here - Icon.svg'
 
-// Figma position for You Are Here: left 1188px, top 1462px (from MCP context)
-const youAreHerePosition = { x: 1188, y: 1462 }
+const youAreHerePosition = { x: 1400, y: 1780 }
 
 function YouAreHereIcon() {
     return (

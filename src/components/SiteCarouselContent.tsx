@@ -77,7 +77,7 @@ export const SiteCarouselContent = () => {
                 return (
                     <CarouselItem key={site.site}>
                         <div
-                            className={` text-[#C19E6D] text-3xl uppercase font-freight ${imageSizeClass}  transition-all duration-100 `}
+                            className={` text-[#C19E6D] text-3xl uppercase font-freight ${imageSizeClass}  transition-all duration-500 `}
                             onClick={() => {
                                 if (isCentered) {
                                     setPopupOpen(true)
