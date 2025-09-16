@@ -13,7 +13,6 @@ export const SiteImage = ({
     name: string
     isSelected: boolean
 }) => {
-    const imgSrc = `/Location Photos/${isSelected ? 'Color Photos' : 'Sepia Photos'}/src.png`
     return (
         <img
             src={src}

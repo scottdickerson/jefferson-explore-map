@@ -57,7 +57,7 @@ export default function Popup() {
                 >
                     {/* Background panel to mirror Figma asset */}
                     <img
-                        src="/Blank Pop-Up Background.png"
+                        src="/Blank Pop-Up Background.webp"
                         alt="Popup Background"
                         className="absolute inset-0 w-full h-full object-contain select-none pointer-events-none"
                         draggable={false}
@@ -88,7 +88,7 @@ export default function Popup() {
                         </div>
                         {/* Divider */}
                         <img
-                            src="/Pop-Up Divider Line.png"
+                            src="/Pop-Up Divider Line.webp"
                             alt="Divider"
                             className=" mt-8 mb-10 w-[1146px] select-none"
                             draggable={false}

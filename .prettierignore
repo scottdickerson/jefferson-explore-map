@@ -5,6 +5,7 @@ package.json
 *.mov
 *.svg
 *.png
+*.webp
 *.mp4
 *.mp3
 *.wav
