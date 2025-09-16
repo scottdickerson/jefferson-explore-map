@@ -77,7 +77,7 @@ export const SiteCarouselContent = () => {
                 return (
                     <CarouselItem key={site.site}>
                         <div
-                            className={` text-[#C19E6D] text-3xl uppercase font-freight ${imageSizeClass}  transition-all duration-500 `}
+                            className={`text-[#C19E6D] text-3xl uppercase font-freight ${imageSizeClass}  transition-all duration-500 `}
                             onClick={() => {
                                 if (isCentered) {
                                     setPopupOpen(true)
@@ -97,13 +97,11 @@ export const SiteCarouselContent = () => {
                                 <img
                                     src={imgSrc}
                                     alt={site.site}
-                                    className={
-                                        isCentered
-                                            ? `mb-4 object-contain transition-all duration-500 opacity-100`
-                                            : `mb-4  object-contain transition-all duration-500`
-                                    }
+                                    className={`mb-4 object-contain transition-all ${isCentered ? 'shadow-lg shadow-black border-[#C19E6D] border-[4px] animate-pulse-scale-center' : ''}`}
                                 />
-                                <h3 className="mb-2 text-center block pl-6 pr-6">
+                                <h3
+                                    className={`mb-2 text-center block pl-6 pr-6 ${isCentered ? 'pt-1' : ''}`}
+                                >
                                     {site.site}
                                 </h3>
                             </div>

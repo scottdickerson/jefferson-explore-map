@@ -3,6 +3,17 @@ export default {
     content: ['./src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte}'],
     theme: {
         extend: {
+            keyframes: {
+                'pulse-scale-center': {
+                    '0%': { transform: 'scale(1)' },
+                    '50%': { transform: 'scale(1.05)' },
+                    '100%': { transform: 'scale(1)' },
+                },
+            },
+            animation: {
+                'pulse-scale-center':
+                    'pulse-scale-center 3s ease-in-out infinite',
+            },
             borderRadius: {
                 lg: 'var(--radius)',
                 md: 'calc(var(--radius) - 2px)',
