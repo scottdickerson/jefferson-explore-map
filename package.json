@@ -9,7 +9,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "format:fix": "prettier --write .",
-    "production": "serve -l 3000 dist"
+  "production": "serve -l 3000 dist",
+  "convert:webp": "node scripts/convert-webp.mjs",
+  "lint:images": "node scripts/check-webp.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.1.0",
@@ -37,6 +39,7 @@
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
+    "sharp": "^0.34.4",
     "tailwindcss": "^3.4.16"
   }
 }

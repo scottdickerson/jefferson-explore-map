@@ -52,29 +52,25 @@ export default function Popup() {
                     </Description>
                 </VisuallyHidden>
                 <div
-                    className="relative mx-auto w-[1355.303px] h-[1870px] font-crimsonText"
+                    className="relative mx-auto w-[1355.303px] h-[2000px] font-crimsonText"
                     onClick={(e) => e.stopPropagation()}
                 >
                     {/* Background panel to mirror Figma asset */}
                     <img
                         src="/Blank Pop-Up Background.webp"
                         alt="Popup Background"
-                        className="absolute inset-0 w-full h-full object-contain select-none pointer-events-none"
+                        className="absolute inset-0 w-full h-full object-fill select-none pointer-events-none"
                         draggable={false}
                     />
 
                     {/* Content layout (vertical stacking like Figma): image -> title -> description -> divider -> address -> walking -> big close */}
                     <div className="absolute inset-0 px-24 pt-24 pb-16 flex flex-col items-start">
-                        <div className="px-20 ">
+                        <div className="px-20 flex flex-col items-center">
                             {/* Image */}
                             <img
-                                src={
-                                    site.popupPhotoSrc ||
-                                    site.colorPhotoSrc ||
-                                    ''
-                                }
+                                src={site.colorPhotoSrc || ''}
                                 alt={site.site}
-                                className="mt-[40px] w-full object-cover select-none"
+                                className="mt-[40px] max-h-[800px] object-cover select-none"
                                 draggable={false}
                             />
                             {/* Title */}
