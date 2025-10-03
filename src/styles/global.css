@@ -81,5 +81,5 @@
 
 @font-face {
     font-family: 'CrimsonText';
-    src: url('/fonts/CrimsonText-Regular.ttf') format('ttf');
+    src: url('/fonts/CrimsonText-Regular.woff') format('woff');
 }

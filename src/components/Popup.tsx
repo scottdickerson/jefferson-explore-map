@@ -52,7 +52,7 @@ export default function Popup() {
                     </Description>
                 </VisuallyHidden>
                 <div
-                    className="relative mx-auto w-[1355.303px] h-[2000px] font-crimsonText"
+                    className="relative mx-auto w-[1555.303px] h-[2400px] font-crimsonText "
                     onClick={(e) => e.stopPropagation()}
                 >
                     {/* Background panel to mirror Figma asset */}
@@ -64,21 +64,21 @@ export default function Popup() {
                     />
 
                     {/* Content layout (vertical stacking like Figma): image -> title -> description -> divider -> address -> walking -> big close */}
-                    <div className="absolute inset-0 px-24 pt-24 pb-16 flex flex-col items-start">
-                        <div className="px-20 flex flex-col items-center">
+                    <div className="absolute inset-0 px-24 pt-24 pb-16 flex flex-col items-start ">
+                        <div className="px-24 flex flex-col items-center">
                             {/* Image */}
                             <img
                                 src={site.colorPhotoSrc || ''}
                                 alt={site.site}
-                                className="mt-[40px] max-h-[800px] object-cover select-none"
+                                className="mt-[40px]  object-cover select-none"
                                 draggable={false}
                             />
                             {/* Title */}
-                            <h2 className="font-freight uppercase mt-14 text-[#C19E6D] font-bold text-[54px] leading-tight carousel-heading">
+                            <h2 className="font-freight uppercase mt-14 text-[#C19E6D] font-bold text-[54px] leading-tight self-start carousel-heading">
                                 {site.site}
                             </h2>
                             {/* Description */}
-                            <div className="mt-6 text-description text-white/90 whitespace-pre-line">
+                            <div className="mt-6 text-description text-white/90 whitespace-pre-line text-pretty">
                                 {site.description}
                             </div>
                         </div>
@@ -86,10 +86,10 @@ export default function Popup() {
                         <img
                             src="/Pop-Up Divider Line.webp"
                             alt="Divider"
-                            className=" mt-8 mb-10 w-[1146px] select-none"
+                            className="mt-12 mb-14 w-full select-none"
                             draggable={false}
                         />
-                        <div className="px-20 flex items-center gap-8 text-[#F5EFE7]">
+                        <div className="px-24 flex items-center gap-8 text-[#F5EFE7]">
                             <div className="flex flex-col items-center gap-16">
                                 <img
                                     src="/Icons/Pop Up/Location Icon.svg"
