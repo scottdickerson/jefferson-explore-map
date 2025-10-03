@@ -81,6 +81,9 @@ export const SiteCarouselContent = () => {
                             onClick={() => {
                                 if (isCentered) {
                                     setPopupOpen(true)
+                                } else {
+                                    api?.scrollTo(index, true)
+                                    setPopupOpen(true)
                                 }
                             }}
                             role={isCentered ? 'button' : undefined}
