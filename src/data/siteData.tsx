@@ -134,7 +134,7 @@ export const Sites: Site[] = [
         y: 1094,
         address: '523 North Polk Street',
         walking: '10 min.  ┃  0.5 miles  ┃  This is a moderate walk',
-        description: `The First Baptist Church’s congregation was organized in 1855 and led by Reverend George B Tucker. The second paster was Reverend D. B. Culberson. The congregation built a two-story brick church in 1869 on this site. It was the site of the 1877 revival led by William E Penn, a well known Texas evangelist. In 1898, the fellowship split in two and only half continued to worship in the brick church. In 1924, the two groups reunited and became the First Baptist Church. The original structure burned in 1944 and was rebuilt.`,
+        description: `The First Baptist Church’s congregation was organized in 1855 and led by Reverend George B Tucker. The second pastor was Reverend D. B. Culberson. The congregation built a two-story brick church in 1869 on this site. It was the site of the 1877 revival led by William E Penn, a well known Texas evangelist. In 1898, the fellowship split in two and only half continued to worship in the brick church. In 1924, the two groups reunited and became the First Baptist Church. The original structure burned in 1944 and was rebuilt in 1946.`,
         colorPhotoSrc:
             '/Location Photos/Color Photos/First-Baptist-Church_Color.webp',
         popupPhotoSrc:
@@ -256,11 +256,11 @@ export const Sites: Site[] = [
         site: 'Jefferson Playhouse',
         name: 'Historic Homes',
         iconSrc: '/Icons/Map/Historic Homes Icon',
-        x: 1208,
-        y: 1542,
-        address: '1860 North Market Street',
+        x: 1288,
+        y: 1500,
+        address: '209 West Henderson Street',
         walking: '4 min.  ┃  0.2 miles  ┃  This is a short walk',
-        description: `Over the years, this historic venue has filled multiple roles. It was built around 1860 by Robert W. Nesmith as a house. In 1869, it was purchased by the Sisters of Charity who used it as a convent, hospital, and school. The Sinai Hebrew Congregation of Jefferson purchased the building in 1875, making it a local synagogue. In 1961, The Jessie Allen Wise Garden Club purchased it. Today, the playhouse is owned by the Excelsior foundation and has been renovated so it can once again be used for cultural and education events.`,
+        description: `Over the years, this historic venue has filled multiple roles. It was built around 1860 by Robert W. Nesmith as a house. In 1869, it was purchased by the Sisters of Charity who used it as a convent, hospital, and school. The Sinai Hebrew Congregation of Jefferson purchased the building in 1875, making it a local synagogue. In 1966, The Jessie Allen Wise Garden Club purchased it. Today, the playhouse is owned by the Excelsior foundation and has been renovated so it can once again be used for cultural and educational events.`,
         colorPhotoSrc:
             '/Location Photos/Color Photos/Jefferson-Playhouse_Color.webp',
         popupPhotoSrc:
@@ -316,7 +316,7 @@ export const Sites: Site[] = [
         iconSrc: '/Icons/Map/Bank Icon',
         x: 1708,
         y: 1608,
-        address: '124 Austin Street',
+        address: '124 East Austin Street',
         walking: '4 min.  ┃  0.2 miles  ┃  This is a short walk',
         description: `John Speake, a local contractor and realtor, built this building as a riverfront warehouse in 1852. Within a few years it became the headquarters for a firm with offices all over the country. In the 1870s, it became a bank with W.M. Harrison serving as the first banker. In 1899, it became the National Bank of Jefferson. In 1946, the building was in need of repair and many of its original features were restored. Today, you can visit this relic of the past, one of Jefferson’s only 19th century warehouses.`,
         colorPhotoSrc:
@@ -367,7 +367,7 @@ export const Sites: Site[] = [
         y: 1696,
         address: '301 West Lafayette Street',
         walking: '2 min.  ┃  456 feet  ┃  This is a short walk',
-        description: `The Sterne fountain was a gift given to the city by Jacob and Ernestine Sterne’s children. The Sterne family was heavily involved in civic and cultural engagements in early Jefferson, including helping run the first post office. The fountain was sculpted by Guiseppe Moretti and features a statue of Hebe, the Greek Goddess of Youth.`,
+        description: `The Sterne fountain, built in 1913,  was a gift given to the city by Jacob and Ernestine Sterne’s children. The Sterne family was heavily involved in civic and cultural engagements in early Jefferson, including helping run the first post office. The fountain was sculpted by Guiseppe Moretti and features a statue of Hebe, the Greek Goddess of Youth.`,
         colorPhotoSrc:
             '/Location Photos/Color Photos/Sterne-Fountain_Color.webp',
         popupPhotoSrc:
