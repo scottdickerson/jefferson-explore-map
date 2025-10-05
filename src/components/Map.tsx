@@ -39,14 +39,23 @@ interface MapDotProps {
     site: Site
     isSelected: boolean
     setHighlightedSite?: (site: string) => void
+    setPopupOpen?: (open: boolean) => void
 }
 
-function MapDot({ site, isSelected, setHighlightedSite }: MapDotProps) {
+function MapDot({
+    site,
+    isSelected,
+    setHighlightedSite,
+    setPopupOpen,
+}: MapDotProps) {
     const color = isSelected ? 'White' : 'Blue'
     const iconSrc = `${site.iconSrc} - ${color}.svg`
     return (
         <button
-            onClick={() => setHighlightedSite && setHighlightedSite(site.site)}
+            onClick={() => {
+                setHighlightedSite && setHighlightedSite(site.site)
+                setPopupOpen && setPopupOpen(true)
+            }}
             className={`absolute transition-transform duration-200 ${isSelected ? 'scale-125 z-20 drop-shadow-[0_0_8px_#00f]' : ''}`}
             style={{ left: site.x, top: site.y, width: 64, height: 64 }}
             title={site.name}
@@ -57,7 +66,7 @@ function MapDot({ site, isSelected, setHighlightedSite }: MapDotProps) {
 }
 
 export default function Map() {
-    const { highlightedSite, setHighlightedSite } =
+    const { highlightedSite, setHighlightedSite, setPopupOpen } =
         React.useContext(SiteContext)
     return (
         <div
@@ -70,6 +79,7 @@ export default function Map() {
                     site={site}
                     isSelected={highlightedSite === site.site}
                     setHighlightedSite={setHighlightedSite}
+                    setPopupOpen={setPopupOpen}
                 />
             ))}
             <YouAreHereIcon />
